@@ -1,6 +1,2 @@
 #!/bin/bash
-while read line
-do
-read
-echo "$line"
-done
+grep -n "" | grep "^[13579]:"  | cut -d: -f2
