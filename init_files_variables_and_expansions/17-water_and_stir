@@ -1,7 +1,6 @@
 #!/bin/bash
 w=$(echo "$WATER" | tr 'water' '01234')
-water_dec=$((5#$w))
 s=$(echo "$STIR" | tr 'stir.' '01234')
-stir_dec=$((5#$s))
-sum=$((water_dec + stir_dec))
-echo "obase=8; $sum" | bc | tr '01234567' 'bestchol'
+sum=$(( 5#$w + 5#$s ))
+result=$(printf '%o' $sum)
+echo "$result" | tr '01234567' 'bestchol'
