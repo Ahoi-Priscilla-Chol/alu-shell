@@ -7,16 +7,16 @@ start() {
 }
 stop() {
     kill "$(cat /var/run/my_process.pid)"
-rm -f /var/run/my_process.pid
-echo "manage_my_process stopped"
+    rm -f /var/run/my_process.pid
+    echo "manage_my_process stopped"
 }
 case "$1" in
-start)
+    start)
         start
         ;;
-    stop)
+ stop)
         stop
-        ;;
+       ;;
     restart)
         stop
         start
